@@ -15,4 +15,39 @@ console.log(challangeName);
 const challangeAccept = true;
 console.log(challangeAccept);
 
-// Activity - 02: Data Type
+// Activity - 03: Data Type
+let challangeDay1 = 1;
+let challangeDayOne = "One";
+let challangeDay1Accept = true;
+const challangeObject = {
+  challangePlatform: "chaicode",
+  challangeAcceptBy: "bhabin buduja pun",
+  challageTotalDays: 30,
+};
+
+let challangeArray = [1, true, "chaicode", "JS-30"];
+
+console.log(typeof challangeDay1);
+console.log(typeof challangeDayOne);
+console.log(typeof challangeDay1Accept);
+console.log(typeof challangeObject);
+console.log(typeof challangeArray);
+
+// Activity - 04: Reassign Variables
+let reassignVariable = true;
+console.log(reassignVariable);
+
+reassignVariable = "changedByRoot";
+console.log(reassignVariable);
+
+// Activity - 05: Understanding 'const'
+const constVariable = "immutable";
+
+constVariable = true;
+console.log(constVariable);
+
+// ERROR MESSAGE: constVariable = true;
+
+// TypeError: Assignment to constant variable.
+//     at Object.<anonymous>
+
