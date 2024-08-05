@@ -29,20 +29,23 @@ rejectPromise.catch((message) => {
 // Activity - 02: Chaining Promise
 // Task 3: Create a sequence of promises that simulate fetching data from a server. Chain the promises to log messages in a specific order.
 
-const fetchApiPromise = new Promise((resolve, reject) => {
-  const url = "https://jsonplaceholder.typicode.com/todos/1a";
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((todos) => {
-      console.log("Fetched Data: ", todos);
-    })
-    .catch((error) => console.log(error));
-});
+function fetchData(message, delay) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log(message);
+      resolve();
+    }, delay);
+  });
+}
+
+fetchData("Fetching user data...", 1000)
+  .then(() => fetchData("User data fetched", 1000))
+  .then(() => fetchData("Fetching posts...", 1000))
+  .then(() => fetchData("Posts fetched", 1000))
+  .then(() => fetchData("Fetching comments...", 1000))
+  .then(() => fetchData("Comments fetched", 1000))
+  .then(() => console.log("All data fetched"))
+  .catch((error) => console.error("An error occurred:", error));
 
 // Activity - 03: Using Async/Await
 // Task 4: Write an async function that waits for a promise to resolve and then logs the resolve value.
@@ -108,6 +111,22 @@ getUserInfo(4);
 
 // Activity - 04: Fetching Data from an API
 // Task 6: Use the fetch API to get data from a public API and log the response data to the console using promises.
+
+const fetchApiPromise = new Promise((resolve, reject) => {
+  const url = "https://jsonplaceholder.typicode.com/todos/1a";
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((todos) => {
+      console.log("Fetched Data: ", todos);
+    })
+    .catch((error) => console.log(error));
+});
+
 // Task 7: Use the fetch API to get data from a public API and log the response data to the console using async/await.
 
 // Activity - 05: Event Delegation
