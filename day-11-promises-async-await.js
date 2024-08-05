@@ -3,11 +3,16 @@
 
 // Activity - 01: Understanding Promises
 // Task 1: Create a promise that resloves with a message after a 2-second timeout and log the message to the console.
-const promise = new Promise(function (reslove, reject) {
+const promise = new Promise(function (resolve, reject) {
   setTimeout(() => {
-    console.log("Hello, there this is the simple example of Promises");
+    resolve("Operation Successfull");
   }, 2000);
 });
+
+promise.then((message) => {
+  console.log(message);
+});
+
 // Task 2: Create a promise that rejects with an error message after a 2-second timeout and handle the error using .catch().
 
 // Activity - 02: Chaining Promise
