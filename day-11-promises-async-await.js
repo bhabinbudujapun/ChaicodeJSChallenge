@@ -4,7 +4,7 @@
 // Activity - 01: Understanding Promises
 // Task 1: Create a promise that resloves with a message after a 2-second timeout and log the message to the console.
 
-const promise = new Promise(function (resolve, reject) {
+const resolvePromise = new Promise(function (resolve, reject) {
   setTimeout(() => {
     resolve("Operation Successfull");
   }, 2000);
@@ -128,6 +128,35 @@ const fetchApiPromise = new Promise((resolve, reject) => {
 });
 
 // Task 7: Use the fetch API to get data from a public API and log the response data to the console using async/await.
+
+function todoTask(taskId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(async () => {
+      try {
+        const url = `https://jsonplaceholder.typicode.com/todos/${taskId}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error status: ${response.status}`);
+        }
+        const taskInfo = await response.json();
+        resolve(taskInfo);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }, 1000);
+}
+
+async function getTodoTask() {
+  const taskId = 5;
+  try {
+    const taskInfo = await todoTask(taskId);
+    console.log(taskInfo);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getTodoTask();
 
 // Activity - 05: Event Delegation
 // Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
