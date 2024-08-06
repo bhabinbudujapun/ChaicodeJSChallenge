@@ -160,4 +160,46 @@ getTodoTask();
 
 // Activity - 05: Event Delegation
 // Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
+
+const promise1 = new Promise((resolve) =>
+  setTimeout(() => resolve("Promise 1 Resolve"), 500)
+);
+
+const promise2 = new Promise((resolve) =>
+  setTimeout(() => resolve("Promise 2 Resolve"), 600)
+);
+
+// Rejection of one promises lead to the .catch section
+// const promise3 = new Promise((_,reject) => {
+//   setTimeout(() => reject("Promise 3 Resolve"), 700);
+// });
+
+const promiseArray = [promise1, promise2];
+Promise.all(promiseArray)
+  .then((result) => {
+    console.log("All promises resolved:", result);
+  })
+  .catch((error) => {
+    console.log("At least one promise rejected:", error);
+  });
+
 // Task 9: Use Promise.race to log the value of the first promise that resolves among multiple promises.
+// As the name suggests, race returns first promise with shortest delay whether it is resolved or rejected.
+
+const promise_1 = new Promise((resolve) => {
+  setTimeout(() => resolve("Promise 1 Resolve"), 300);
+});
+
+const promise_2 = new Promise((resolve) => {
+  setTimeout(() => resolve("Promise 2 Resolve"), 100);
+});
+
+const arrayPromise = [promise1, promise_2];
+
+Promise.race(arrayPromise)
+  .then((result) => {
+    console.log("First Promises Resolved", result);
+  })
+  .catch((error) => {
+    console.log("At least one promise rejected: ", error);
+  });
