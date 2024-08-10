@@ -1,9 +1,17 @@
 // Day 4: Loop
 // Task/Activities:
 
-// Activity - 01: If-Else Statements
+// Activity - 01: For Loop
 // Task 1: WAP to print numbers from 1 to 10 using for loop
+
+for (let number = 1; number <= 10; number++) {
+  console.log(number);
+}
+
 // Task 2: WAP to print multiplication table of 6 using a for loop
+for (let table = 1; table <= 10; table++) {
+  console.log(table * 6);
+}
 
 // // Activity - 02: While Loop
 // Task 3: WAP to calculate sum of numbers from 1 to 10 using while loop
