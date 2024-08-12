@@ -35,6 +35,13 @@ while (reverse_num) {
 
 // // Activity - 03: Do...While Loop
 // Task 5: WAP print numbers from 1 to 5 using a do...while loop
+
+let numbers = 1;
+do {
+  console.log(numbers);
+  numbers += 1;
+} while (numbers <= 5);
+
 // Task 6: WAP calculate the factorial of number using a do...while loop
 
 // // Activity - 04: Nested Loops
