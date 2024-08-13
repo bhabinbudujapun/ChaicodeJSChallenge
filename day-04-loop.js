@@ -44,6 +44,14 @@ do {
 
 // Task 6: WAP calculate the factorial of number using a do...while loop
 
+let factorial_number = 5;
+let factorial_sum = 1;
+do {
+  factorial_sum *= factorial_number;
+  factorial_number -= 1;
+} while (factorial_number >= 1);
+console.log(factorial_sum);
+
 // // Activity - 04: Nested Loops
 // Task 7: WAP to print pattern using nested for loops
 // *
