@@ -1,8 +1,17 @@
 // Day 5: Functions
-// Task/Activities: 
+// Task/Activities:
 
 // Activity - 01: Function Declaration
 // Task 1: WAF to check if a number if odd or even and console the result
+
+function isEven(number) {
+  if (number % 2 == 0) return "Even Number";
+  return "Odd Number";
+}
+
+let number = 32;
+console.log(isEven(number));
+
 // Task 2: WAF to calculate the square of a number and return the result
 
 // Activity - 02: Function Expression
@@ -15,7 +24,7 @@
 
 // Activity - 04: Function Parameters and Default Values
 // Task 7: WAF that takes two parameters and returns their product. And provide default value for second parameter.
-// Task 8: WAF that takes person's name and age and returns a greeting message. Provide a default value for the age. 
+// Task 8: WAF that takes person's name and age and returns a greeting message. Provide a default value for the age.
 
 // Activity - 05: Higher-Order Functions
 // Task 8:  Higher-Order Func. that takes a Func. and number, and calls the function that many times
