@@ -14,8 +14,26 @@ console.log(isEven(number));
 
 // Task 2: WAF to calculate the square of a number and return the result
 
+function square(number) {
+  return number * number;
+}
+
+let square_number = 5;
+console.log(square(square_number));
+
 // Activity - 02: Function Expression
 // Task 3: WAF expression to find the max number between two and log the result
+
+function max_number(firstNumber, secondNumber){
+  if(firstNumber>secondNumber)
+    return firstNumber;
+  return secondNumber;
+}
+
+let firstNumber = 15;
+let secondNumber = 14;
+console.log(max_number(firstNumber,secondNumber))
+
 // Task 4: WAF expression to concatenate two strings and return the result
 
 // Activity - 03: Arrow Functions
