@@ -24,17 +24,25 @@ console.log(square(square_number));
 // Activity - 02: Function Expression
 // Task 3: WAF expression to find the max number between two and log the result
 
-function max_number(firstNumber, secondNumber){
-  if(firstNumber>secondNumber)
-    return firstNumber;
+function max_number(firstNumber, secondNumber) {
+  if (firstNumber > secondNumber) return firstNumber;
   return secondNumber;
 }
 
 let firstNumber = 15;
 let secondNumber = 14;
-console.log(max_number(firstNumber,secondNumber))
+console.log(max_number(firstNumber, secondNumber));
 
 // Task 4: WAF expression to concatenate two strings and return the result
+
+function concat_string(firstString, secondString) {
+  return firstString + secondString;
+}
+
+let firstString = "bhabin";
+let secondString = "root";
+
+console.log(concat_string(firstString, secondString));
 
 // Activity - 03: Arrow Functions
 // Task 5: Arrow Function to calculate sum of two numbers and return the result
