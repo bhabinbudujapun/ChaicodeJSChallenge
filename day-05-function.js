@@ -46,6 +46,12 @@ console.log(concat_string(firstString, secondString));
 
 // Activity - 03: Arrow Functions
 // Task 5: Arrow Function to calculate sum of two numbers and return the result
+
+const arrowSumFun = (firstNumber, secondNumber) => {
+  return firstNumber + secondNumber;
+};
+console.log(arrowSumFun(1, 2));
+
 // Task 6: Arrow Function to check string contains a specific char. and return boolean value
 
 // Activity - 04: Function Parameters and Default Values
