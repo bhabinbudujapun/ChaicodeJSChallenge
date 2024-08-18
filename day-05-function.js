@@ -53,6 +53,14 @@ const arrowSumFun = (firstNumber, secondNumber) => {
 console.log(arrowSumFun(1, 2));
 
 // Task 6: Arrow Function to check string contains a specific char. and return boolean value
+// function: indexOf(char) return index of character otherwise -1
+
+const arrowStrFun = (Char) => {
+  let word = "Arrow";
+  return word.indexOf(Char) != -1 ? true : false;
+};
+
+console.log(arrowStrFun("A"));
 
 // Activity - 04: Function Parameters and Default Values
 // Task 7: WAF that takes two parameters and returns their product. And provide default value for second parameter.
