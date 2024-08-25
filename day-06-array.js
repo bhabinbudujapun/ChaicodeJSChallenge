@@ -3,7 +3,20 @@
 
 // Activity - 01: Array Creation and Access
 // Task 1: Create an array of numbers from 1 to 5 and log the array values
+
+let number_array = [1, 2, 3, 4, 5];
+for (let index = 0; index < number_array.length; index++) {
+  const element = number_array[index];
+  console.log(element);
+}
+
 // Task 2: Access the first and last element of the previous array
+
+// Accessing the First Element
+console.log("First Element: " + number_array[0]);
+
+//Accessing the Last Element
+console.log("Last Element: " + number_array[number_array.length - 1]);
 
 // Activity - 02: Array Methods (Basic)
 // Task 3: Use 'push' method to add new number and log updated array
