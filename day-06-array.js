@@ -19,10 +19,31 @@ console.log("First Element: " + number_array[0]);
 console.log("Last Element: " + number_array[number_array.length - 1]);
 
 // Activity - 02: Array Methods (Basic)
+
+let values = [1, "apple", 2, "ball", 3, 4, "cat"];
+console.log("Original Array: ", values);
+
 // Task 3: Use 'push' method to add new number and log updated array
+
+values.push("77");
+console.log("After Push: ", values);
+
 // Task 4: Use 'pop' method to remove the last element and log the updated array
+
+const pop_value = values.pop();
+console.log("Pop Value: ", pop_value);
+console.log("After Pop: ", values);
+
 // Task 5: Use 'shift' method to remove the first element from the array log the updated array
+
+const shift_value = values.shift();
+console.log("Shift Value: ", shift_value);
+console.log("After Shift: ", values);
+
 // Task 6: Use 'unshift' method to add new number to the beginning of the array and log the updated array
+
+values.unshift(77);
+console.log("After Unshift: ", values);
 
 // Activity - 03: Array Methods (Intermediate)
 // Task 7: Use 'map' method to double each value and log the updated value
