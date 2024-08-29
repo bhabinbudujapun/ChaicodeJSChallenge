@@ -5,10 +5,7 @@
 // Task 1: Create an array of numbers from 1 to 5 and log the array values
 
 let number_array = [1, 2, 3, 4, 5];
-for (let index = 0; index < number_array.length; index++) {
-  const element = number_array[index];
-  console.log(element);
-}
+console.log(number_array);
 
 // Task 2: Access the first and last element of the previous array
 
@@ -52,7 +49,18 @@ console.log("After Unshift: ", values);
 
 // Activity - 04: Array Iteration
 // Task 10: Use 'for loop' to iterate over the array
+
+let array_iteration = [1, 2, 3, 4, 5, 6];
+for (let index = 0; index < array_iteration.length; index++) {
+  const element = array_iteration[index];
+  console.log(element);
+}
+
 // Task 11: Use 'forEach' method to iterate over the array
+
+array_iteration.forEach((element) => {
+  console.log(element);
+});
 
 // Activity - 05: Multi-dimensional arrays
 // Task 12: Create a two-dimensional array (matrix) and log the entire array
