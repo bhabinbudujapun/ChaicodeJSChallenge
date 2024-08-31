@@ -64,4 +64,30 @@ array_iteration.forEach((element) => {
 
 // Activity - 05: Multi-dimensional arrays
 // Task 12: Create a two-dimensional array (matrix) and log the entire array
+
+let multi_dimen_array = [
+  [1, 2, 3, 4, 5],
+  ["a", "b", "c", "d", "e"],
+];
+
+for (let i = 0; i < multi_dimen_array.length; i++) {
+  for (let j = 0; j < multi_dimen_array[i].length; j++) {
+    const element = multi_dimen_array[i][j];
+    console.log(element);
+  }
+}
+
 // Task 13: Access and log a specific element from the 2D array.
+let another_multi_dimen_array = [
+  [1, 2, 3, 4, 5],
+  ["a", "b", "c", "d", "e"],
+];
+
+for (let i = 0; i < another_multi_dimen_array.length; i++) {
+  for (let j = 0; j < another_multi_dimen_array[i].length; j++) {
+    if (j == 2) {
+      const element = another_multi_dimen_array[i][j];
+      console.log(element);
+    }
+  }
+}
