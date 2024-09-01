@@ -5,6 +5,19 @@
 // Task 1: create an object representing a book with properties like title author and year and log the object to the console
 // Task 2: access the log and the title and author properties of the book object
 
+//Answer for both question 1 and 2
+
+class Book {
+  constructor(title, author, year) {
+    (this.title = title), (this.author = author), (this.year = year);
+  }
+}
+
+let munamadan = new Book("Muna And Madan", "Laxmi Prashad Devkota", 1935);
+console.log(
+  `${munamadan.title} was written in ${munamadan.year} by ${munamadan.author}`
+);
+
 // Activity - 02: Object Methods (Basic)
 // Task 3: add a method to the book object that return a sting with the book title and author and log the result of calling this method
 // Task 4: add a method to the book object that take a parameter(year) and update  the books year property then log the updated object
