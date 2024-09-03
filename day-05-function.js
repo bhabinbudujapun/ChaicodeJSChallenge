@@ -64,7 +64,22 @@ console.log(arrowStrFun("A"));
 
 // Activity - 04: Function Parameters and Default Values
 // Task 7: WAF that takes two parameters and returns their product. And provide default value for second parameter.
+
+const product = (firstPram, secondPram = 1) => {
+  return firstPram * secondPram;
+};
+
+// or, console.log(product(4));
+console.log(product(3, 3));
+
 // Task 8: WAF that takes person's name and age and returns a greeting message. Provide a default value for the age.
+
+const personDetail = (name, age = 24) => {
+  return `Hello, ${name} you are ${age} years old`;
+};
+
+// or, console.log(personDetail("bhabin"));
+console.log(personDetail("root", 21));
 
 // Activity - 05: Higher-Order Functions
 // Task 8:  Higher-Order Func. that takes a Func. and number, and calls the function that many times
