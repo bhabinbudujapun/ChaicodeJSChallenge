@@ -43,9 +43,24 @@ values.unshift(77);
 console.log("After Unshift: ", values);
 
 // Activity - 03: Array Methods (Intermediate)
-// Task 7: Use 'map' method to double each value and log the updated value
-// Task 8: Use 'filter' method create new array of even numbers and log the new array
-// Task 9: Use 'reduce' method to sum all the numbers of array.
+// Assuming we have an initial array
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Task 7: Use 'map' to double each value and log the updated value
+const doubledNumbers = numbers.map(num => {
+  const doubled = num * 2;
+  console.log(`Doubled value: ${doubled}`); // Logging each updated value
+  return doubled;
+});
+console.log("Doubled array:", doubledNumbers);
+
+// Task 8: Use 'filter' to create new array of even numbers and log the new array
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log("Even numbers array:", evenNumbers);
+
+// Task 9: Use 'reduce' to sum all the numbers of array
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log("Sum of all numbers:", sum);
 
 // Activity - 04: Array Iteration
 // Task 10: Use 'for loop' to iterate over the array
