@@ -83,4 +83,29 @@ console.log(personDetail("root", 21));
 
 // Activity - 05: Higher-Order Functions
 // Task 8:  Higher-Order Func. that takes a Func. and number, and calls the function that many times
+
+const repeatFunction = (fn, times) => {
+  for (let i = 0; i < times; i++) {
+    fn(); // Call the passed function
+  }
+};
+
+// Example function to pass
+const greet = () => console.log("Hello!");
+
+repeatFunction(greet, 3); // Will print "Hello!" 3 times
+
+
 // Task 9: Higher-Order Func. that takes two Func. and a value, applies the fist Func. to the value, and then applies the second func. to the result
+
+const applyTwoFunctions = (fn1, fn2, value) => {
+  const result1 = fn1(value); // Apply the first function
+  const result2 = fn2(result1); // Apply the second function to the result
+  return result2;
+};
+
+// Example functions
+const double = (x) => x * 2;
+const square = (x) => x * x;
+
+console.log(applyTwoFunctions(double, square, 3)); // (3*2)^2 = 36
