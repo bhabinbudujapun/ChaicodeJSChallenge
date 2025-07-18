@@ -7,7 +7,14 @@
 
 // Activity - 02: Creating and Appending Elements
 // Task 3: Create a new 'div' element with some text content and append it to the body.
+const div = document.createElement("div");
+div.textContent = "This is a new div element.";
+document.body.appendChild(div);
+
 // Task 4: Create a new 'li' element and add it to an existing 'ul' list.
+const li = document.createElement("li");
+li.textContent = "This is a new list item.";
+const ul = document.querySelector("ul"); // Assuming there's an existing <ul> in the HTML
 
 // Activity - 03: Removing Elements
 // Task 5: Select and HTML element and remove it from the DOM.
