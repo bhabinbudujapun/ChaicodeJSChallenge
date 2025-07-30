@@ -4,11 +4,16 @@
 // Activity - 01: Selecting and Manipulating Elements
 // Task 1: Select and HTML element by its ID and change its text content.
 const elementById = document.getElementById("myElement");
-elementById.textContent = "This is the new text content.";
-
+if (elementById) {
+    elementById.textContent = "This is the new text content.";
+}   
 // Task 2: Select and HTML element by its class and change its background color.
 const elementsByClass = document.getElementsByClassName("myClass");
-elementsByClass[0].style.backgroundColor = "lightblue";
+if (elementsByClass.length > 0) {   
+    for (let i = 0; i < elementsByClass.length; i++) {
+        elementsByClass[i].style.backgroundColor = "lightblue";
+    }
+}
 
 // Activity - 02: Creating and Appending Elements
 // Task 3: Create a new 'div' element with some text content and append it to the body.
@@ -24,13 +29,14 @@ const ul = document.querySelector("ul"); // Assuming there's an existing <ul> in
 // Activity - 03: Removing Elements
 // Task 5: Select and HTML element and remove it from the DOM.
 const elementToRemove = document.querySelector(".remove-me");
-elementToRemove.remove();
-// Task 6: Remove the last child of a specific HTML element.
-const parentElement = document.querySelector(".parent-element");
-if (parentElement.lastChild) {
-  parentElement.removeChild(parentElement.lastChild);
+if (elementToRemove) {
+    elementToRemove.remove();
 }
-
+// Task 6: Remove the last child of a specific HTML element.
+const parentElement = document.querySelector(".parent-element"); // Assuming there's a parent element with this class
+if (parentElement && parentElement.lastChild) {
+    parentElement.removeChild(parentElement.lastChild);
+}
 // Activity - 04: Modifying Attributes and Classes
 // Task 7: Select an HTML element and change one of its attributes (e.g., 'src' of an 'img' tag).
 const imageElement = document.querySelector("img");
